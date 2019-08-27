@@ -57,6 +57,7 @@
       }
 
       table {
+        width: 100%;
         border: 1px solid #000;
         border-collapse: collapse;
       }
@@ -71,10 +72,23 @@
       .table-head {
         background-color: #666;
       }
-      .footer{
-          padding-right: 10%;
-          padding-left: 10%;
-          margin-top: 5rem;
+      .footer {
+        padding-right: 10%;
+        padding-left: 10%;
+        margin-top: 5rem;
+      }
+
+      @media only screen and (max-width: 500px) {
+        .mainContainer {
+          padding: 0;
+        }
+        p {
+          font-size: 12px;
+        }
+        table, tr, th, td {
+          margin: 0;
+          padding: 0;
+        }
       }
     </style>
   </head>
@@ -181,7 +195,7 @@
             </div>
           </div>
         </div>
-        <div style="display: flex; justify-content: center;">
+        <div style="display: flex; justify-content: center; overflow-x: auto;">
           <table>
             <tr class="table-head" id="tab">
               <th>Sl.no</th>
@@ -196,26 +210,26 @@
             </tr>
 
             <tr>
-                <td colspan="7" style="text-align: left;">Total:</td>
-                <td>300</td>
-                <td>350</td>
+              <td colspan="7" style="text-align: left;">Total:</td>
+              <td>300</td>
+              <td>350</td>
             </tr>
             <tr>
-                <td colspan="9" style="text-align: left;">AmountInWords:&nbsp;&nbsp; Three Hundred and Fifty</td>
+              <td colspan="9" style="text-align: left;">
+                AmountInWords:&nbsp;&nbsp; Three Hundred and Fifty
+              </td>
             </tr>
-
           </table>
         </div>
       </div>
 
       <div class="footer">
         <p class="margin-zero">
-            This is foooooooooooooterrrrrrr!
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id nihil
-          quas inventore blanditiis est, excepturi unde natus vitae labore,
-          placeat neque dolorum distinctio assumenda laudantium maxime odit
-          aperiam dolor quibusdam voluptatem? Veniam nihil praesentium minus ad,
-          quo cumque deserunt modi!
+          This is foooooooooooooterrrrrrr! Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Id nihil quas inventore blanditiis est,
+          excepturi unde natus vitae labore, placeat neque dolorum distinctio
+          assumenda laudantium maxime odit aperiam dolor quibusdam voluptatem?
+          Veniam nihil praesentium minus ad, quo cumque deserunt modi!
         </p>
       </div>
     </div>
