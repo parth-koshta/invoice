@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .mainContainer {
+        background-color: #fff;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        overflow: auto;
+        padding: 1rem;
+      }
+      .invoice {
+        display: flex;
+        flex-direction: column;
+      }
+      .row-flex-between {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .text-bold {
+        font-weight: 700;
+      }
+      .text-align-right {
+        text-align: right;
+      }
+      .half-width {
+        width: 50%;
+        padding: 1rem;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+      .margin-zero {
+        margin: 0;
+      }
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+      }
+      .justify-end {
+        justify-content: flex-end;
+      }
+
+      table {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border-right: 1px solid;
+        text-align: center;
+      }
+      tr {
+        border-top: 1px solid #666;
+      }
+      .table-head {
+        background-color: #666;
+      }
+      .footer{
+          padding-right: 10%;
+          padding-left: 10%;
+          margin-top: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="invoice">
+        <div class="row-flex-between">
+          <div>
+            <p>GHACK</p>
+          </div>
+          <div>
+            <p class="text-bold text-align-right margin-zero">
+              Tax Invoice/Bill of Supply/Cash Memo
+            </p>
+            <p class="text-align-right margin-zero">(Original for Recipient)</p>
+          </div>
+        </div>
+
+        <div class="row-flex-between">
+          <div class="half-width">
+            <p class="margin-zero text-bold">Sold by:</p>
+            <p class="margin-zero">Appario sale pvt ltd</p>
+            <p class="margin-zero">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+              quo, aut architecto impedit eius magni. Nihil exercitationem
+              commodi deleniti inventore?
+            </p>
+          </div>
+          <div
+            class="half-width"
+            style="flex:row; flex-direction: row; justify-content: flex-end;"
+          >
+            <p class="text-align-right text-bold margin-zero">
+              Billing Address:
+            </p>
+            <p class="text-align-right margin-zero">Parth Koshta</p>
+            <p class="text-align-right margin-zero">
+              Parth's address here Lorem ipsum dolor sit amet consectetur,
+              adipiLorem ipsum dolor sit
+            </p>
+            <p class="text-align-right margin-zero">
+              Bangalore, Karnataka 560037
+            </p>
+            <p class="text-align-right margin-zero">IN</p>
+          </div>
+        </div>
+
+        <div class="row-flex-between">
+          <div class="half-width">
+            <div class="flex-row">
+              <p class="text-bold margin-zero">Pan No:&nbsp;</p>
+              <p class="margin-zero">AALCA0171E</p>
+            </div>
+            <div class="flex-row">
+              <p class="text-bold margin-zero">GST Registration No:&nbsp;</p>
+              <p class="margin-zero">29AALCA0171E1ZV</p>
+            </div>
+          </div>
+          <div
+            class="half-width"
+            style="flex:row; flex-direction: row; justify-content: flex-end;"
+          >
+            <p class="text-align-right text-bold margin-zero">
+              Shipping Address:
+            </p>
+            <p class="text-align-right margin-zero">Parth Koshta</p>
+            <p class="text-align-right margin-zero">
+              Parth's address here Lorem ipsum dolor sit amet consectetur,
+              adipiLorem ipsum dolor sit
+            </p>
+            <p class="text-align-right margin-zero">
+              Bangalore, Karnataka 560037
+            </p>
+            <p class="text-align-right margin-zero">IN</p>
+          </div>
+        </div>
+
+        <div class="row-flex-between">
+          <div class="half-width">
+            <div class="flex-row">
+              <p class="text-bold margin-zero">Pan No:&nbsp;</p>
+              <p class="margin-zero">AALCA0171E</p>
+            </div>
+            <div class="flex-row">
+              <p class="text-bold margin-zero">GST Registration No:&nbsp;</p>
+              <p class="margin-zero">29AALCA0171E1ZV</p>
+            </div>
+          </div>
+          <div
+            class="half-width"
+            style="flex:row; flex-direction: row; justify-content: flex-end;"
+          >
+            <div class="flex-row justify-end">
+              <p class="text-bold margin-zero">Invoice Number:&nbsp;</p>
+              <p class="margin-zero">BLR7-1991559</p>
+            </div>
+            <div class="flex-row justify-end">
+              <p class="text-bold margin-zero">Invoice Details:&nbsp;</p>
+              <p class="margin-zero text-align-right">KA-BLR7-1034-1819</p>
+            </div>
+            <div class="flex-row justify-end">
+              <p class="text-bold margin-zero">Invoice Date:&nbsp;</p>
+              <p class="margin-zero text-align-right">14.03.2019</p>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+          <table>
+            <tr class="table-head" id="tab">
+              <th>Sl.no</th>
+              <th>Description</th>
+              <th>Unit Price</th>
+              <th>Qty</th>
+              <th>Net Amount</th>
+              <th>Tax Rate</th>
+              <th>Tax Type</th>
+              <th>Tax Amount</th>
+              <th>Total Amount</th>
+            </tr>
+
+            <tr>
+                <td colspan="7" style="text-align: left;">Total:</td>
+                <td>300</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td colspan="9" style="text-align: left;">AmountInWords:&nbsp;&nbsp; Three Hundred and Fifty</td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p class="margin-zero">
+            This is foooooooooooooterrrrrrr!
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id nihil
+          quas inventore blanditiis est, excepturi unde natus vitae labore,
+          placeat neque dolorum distinctio assumenda laudantium maxime odit
+          aperiam dolor quibusdam voluptatem? Veniam nihil praesentium minus ad,
+          quo cumque deserunt modi!
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var data = [
+        {
+          sl: 1,
+          description:
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Essequo",
+          unitPrice: 300,
+          qty: 1,
+          shippingCharges: 50,
+          taxRate: "5%",
+          taxType1: "CGST",
+          taxType2: "SGST",
+          taxAmount: 350,
+          totalAmount: 350,
+          totalDeliveryCharge: 50,
+          shippingTax: 5
+        },
+        {
+          sl: 2,
+          description:
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Essequo",
+          unitPrice: 300,
+          qty: 1,
+          shippingCharges: 50,
+          taxRate: "5%",
+          taxType1: "CGST",
+          taxType2: "SGST",
+          taxAmount: 350,
+          totalAmount: 350,
+          totalDeliveryCharge: 50,
+          shippingTax: 5
+        }
+      ];
+      var tab = document.querySelectorAll("#tab")[0];
+
+      var tr;
+      var td;
+
+      for (var i = 0; i < data.length; i++) {
+        (tr = document.createElement("tr")),
+          (td = document.createElement("td"));
+        td.innerHTML = data[i].taxRate;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxType2;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].shippingTax;
+        tr.appendChild(td);
+
+        tab.insertAdjacentHTML("afterend", tr.outerHTML);
+
+        (tr = document.createElement("tr")),
+          (td = document.createElement("td"));
+        td.rowSpan = "2";
+        td.innerHTML = "Shipping Charges";
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "2";
+        td.innerHTML = data[i].shippingCharges;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "2";
+        td.innerHTML = data[i].shippingCharges;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxRate;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxType1;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].shippingTax;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "2";
+        td.innerHTML = data[i].shippingCharges;
+        tr.appendChild(td);
+
+        tab.insertAdjacentHTML("afterend", tr.outerHTML);
+
+        (tr = document.createElement("tr")),
+          (td = document.createElement("td"));
+        td.innerHTML = data[i].taxRate;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxType2;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxAmount;
+        tr.appendChild(td);
+
+        tab.insertAdjacentHTML("afterend", tr.outerHTML);
+
+        (tr = document.createElement("tr")),
+          (td = document.createElement("td"));
+
+        td.rowSpan = "4";
+        td.innerHTML = data[i].sl;
+
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "2";
+        td.innerHTML = data[i].description;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "2";
+        td.innerHTML = data[i].unitPrice;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "4";
+        td.innerHTML = data[i].qty;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "2";
+        td.innerHTML = data[i].unitPrice;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxRate;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxType1;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.innerHTML = data[i].taxAmount;
+        tr.appendChild(td);
+
+        td = document.createElement("td");
+        td.rowSpan = "2";
+        td.innerHTML = data[i].totalAmount;
+        tr.appendChild(td);
+
+        tab.insertAdjacentHTML("afterend", tr.outerHTML);
+      }
+    </script>
+  </body>
+</html>
